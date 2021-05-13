@@ -14,6 +14,7 @@ export class EventService {
     return this.repository.find();
   }
 
-  getEventById() {
+  getEventById(id) {
+    return this.repository.findOne(id)
   }
 }
