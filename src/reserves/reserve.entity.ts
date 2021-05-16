@@ -10,4 +10,7 @@ export class Reserve {
 
   @Column()
   eventId: number;
+  
+  @Column()
+  date: Date;
 }
