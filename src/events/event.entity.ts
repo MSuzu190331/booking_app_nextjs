@@ -3,7 +3,7 @@ import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 @Entity()
 export class Event {
   @PrimaryGeneratedColumn()
-  id: number;
+  id?: number;
 
   @Column({ length: 48 })
   title: string;
@@ -25,4 +25,9 @@ export class Event {
 
   @Column()
   capacity: number;
+
+  constructor(title: string, description: string, hall: string, eventStartDate: Date, eventEndDate: Date, organizer: string, capacity: number) {
+    this.title = title;
+    this.description = description;
+  }
 }

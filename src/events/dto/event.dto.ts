@@ -2,6 +2,9 @@ import { IsNotEmpty } from "class-validator";
 
 export class EventDto {
   @IsNotEmpty()
+  id: number;
+
+  @IsNotEmpty()
   title: string;
 
   @IsNotEmpty()
