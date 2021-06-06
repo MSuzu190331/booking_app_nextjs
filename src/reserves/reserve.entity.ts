@@ -5,12 +5,12 @@ export class Reserve {
   @PrimaryGeneratedColumn()
   id?: number;
 
-  @Column()
+  @Column({ nullable: false })
   userId: number;
 
-  @Column()
+  @Column({ nullable: false })
   eventId: number;
   
-  @Column()
+  @Column({ nullable: false })
   date: Date;
 }

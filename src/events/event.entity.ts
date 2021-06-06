@@ -5,25 +5,25 @@ export class Event {
   @PrimaryGeneratedColumn()
   id?: number;
 
-  @Column({ length: 48 })
+  @Column({ length: 48, nullable: false })
   title: string;
 
-  @Column()
+  @Column({ nullable: false })
   description: string;
 
-  @Column()
+  @Column({ nullable: false })
   hall: string;
 
-  @Column()
+  @Column({ nullable: false })
   eventStartDate: Date;
 
-  @Column()
+  @Column({ nullable: false })
   eventEndDate: Date;
 
-  @Column()
+  @Column({ nullable: false })
   organizer: string;
 
-  @Column()
+  @Column({ nullable: false })
   capacity: number;
 
   constructor(title: string, description: string, hall: string, eventStartDate: Date, eventEndDate: Date, organizer: string, capacity: number) {
